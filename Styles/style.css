@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: rgba(25, 25, 25, 0.8823529412);
+}
+
+main {
+  min-height: 95vh;
+  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 1.5rem 4rem;
+}
+
+header {
+  color: #fff;
+  margin-top: 4rem;
+  margin-right: 2rem;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+header h1 {
+  font-size: 3rem;
+}
+header button {
+  max-width: 8rem;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+  border: transparent;
+}
+header button:hover {
+  background-color: #C06B3E;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-list {
+  display: flex;
+  gap: 2rem;
+}
+nav .nav-list li {
+  list-style: none;
+}
+nav .mobile {
+  display: none;
+}
+nav .mobile i {
+  font-size: 2rem;
+}
+nav #no-hover:active, nav #no-hover:hover {
+  color: #fff;
+}
+
+#logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#logo span {
+  color: #C06B3E;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.4s ease;
+}
+a:hover {
+  color: #C06B3E;
+}
+
+@media (max-width: 785px) {
+  nav .nav-list {
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    right: -300px;
+    top: 0;
+    width: 200px;
+    padding: 2rem;
+    background-color: rgba(192, 108, 62, 0.7882352941);
+    height: 100%;
+    z-index: 99;
+  }
+  nav .nav-list.active {
+    right: 0;
+  }
+  nav .mobile {
+    display: block;
+    z-index: 999;
+  }
+}
+@media (max-width: 500px) {
+  nav .nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    padding: 2rem;
+    background-color: #c06c3e;
+    height: 100%;
+    z-index: 99;
+  }
+  nav .nav-list.active {
+    width: 100%;
+  }
+  nav .mobile {
+    display: block;
+    z-index: 999;
+  }
+}
+#heading {
+  background-color: #C06B3E;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0 2rem;
+  margin: 2rem auto;
+  transform: skewX(30deg);
+}
+#heading h2 {
+  transform: skewX(-30deg);
+  font-size: 2rem;
+  color: #fff;
+}
+
+hr {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.container {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.container .card {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  cursor: pointer;
+}
+.container .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+.container .card .info {
+  position: absolute;
+  bottom: 0;
+  padding: 6px 9px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(192, 108, 62, 0.6117647059);
+  width: 100%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: 0.3s ease;
+}
+.container .card .info p {
+  color: #fff;
+}
+.container .card:hover .info {
+  transform: scaleY(1);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #C06B3E;
+  width: 100%;
+  height: 10rem;
+}
+footer .contact {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+footer .contact a i {
+  font-size: 2rem;
+  color: rgba(25, 25, 25, 0.8823529412);
+}
+footer .contact a i:hover {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$main-color: #C06B3E;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #191919e1;
+}
+
+// navbar
+
+main {
+    min-height: 95vh;
+    background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1.5rem 4rem;
+}
+
+header {
+    color: #fff;
+    margin-top: 4rem;
+    margin-right: 2rem;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    button {
+        max-width: 8rem;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        transition: .3s ease;
+        border: transparent;
+
+        &:hover {
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-list {
+        display: flex;
+        gap: 2rem;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .mobile {
+        display: none;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    #no-hover {
+
+        &:active,
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+#logo {
+    font-size: 2rem;
+    font-weight: 700;
+
+    span {
+        color: $main-color;
+    }
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: .4s ease;
+
+    &:hover {
+        color: $main-color;
+
+    }
+}
+
+
+
+
+//media qurey
+
+@media (max-width:785px) {
+    nav {
+        .nav-list {
+            flex-direction: column;
+            position: fixed;
+            justify-content: center;
+            right: -300px;
+            top: 0;
+            width: 200px;
+            padding: 2rem;
+            background-color: #c06c3ec9;
+            height: 100%;
+            z-index: 99;
+
+            &.active {
+                right: 0;
+            }
+
+        }
+
+        .mobile {
+            display: block;
+            z-index: 999;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    nav {
+        .nav-list {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            right: -300px;
+            top: 0;
+            padding: 2rem;
+            background-color: #c06c3e;
+            height: 100%;
+            z-index: 99;
+
+            &.active {
+                width: 100%;
+            }
+        }
+
+        .mobile {
+            display: block;
+            z-index: 999;
+        }
+    }
+}
+
+// hero section
+
+#heading {
+    background-color: $main-color;
+    max-width: fit-content;
+    padding: 0 2rem;
+    margin: 2rem auto;
+    transform: skewX(30deg);
+
+    h2 {
+        transform: skewX(-30deg);
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+
+hr {
+    width: 70%;
+    margin: 2rem auto;
+}
+
+.container {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .card {
+        width: 280px;
+        height: 280px;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .info {
+            position: absolute;
+            bottom: 0;
+            padding: 6px 9px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #c06c3e9c;
+            width: 100%;
+            transform-origin: bottom;
+            transform: scaleY(0);
+            transition: .3s ease;
+
+            p {
+                color: #fff;
+            }
+        }
+
+        &:hover .info {
+            transform: scaleY(1);
+        }
+
+
+    }
+}
+
+// Footer
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #C06B3E;
+    width: 100%;
+    height: 10rem;
+
+    .contact {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+        a i {
+            font-size: 2rem;
+            color: #191919e1;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
